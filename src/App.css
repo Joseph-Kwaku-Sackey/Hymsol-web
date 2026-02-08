@@ -1,6 +1,14 @@
 @import "tailwindcss";
 
 
+html{
+  background-color: #000;
+}
+
+body{
+  background-color: #000;
+}
+
 #main-container{
   background: url("../src//assets//img_ad-1.jpg") center;
 
