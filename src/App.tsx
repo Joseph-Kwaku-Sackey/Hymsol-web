@@ -7,13 +7,13 @@ function App() {
 	return (
 		<div
 			id="main-container"
-			className=" min-h-2dvh isolate flex gap-15 flex-col"
+			className=" min-h-dvh isolate flex gap-15 flex-col"
 		>
-			<div className="bg-[#000000cc] h-full absolute inset -z-300 backdrop-blur-lg  w-full " />
+			<div className="bg-[#000000cc] min-h-dvh   absolute inset -z-300 backdrop-blur-lg  w-full " />
 			<header className="h-15 flex items-center top-0 pl-4 z-100">
 				<img src={Logo} width={110} />
 			</header>
-			<article className=" h-full flex items-center flex-col  z-300 ">
+			<article className=" h-full flex items-center flex-col z-300 ">
 				<section className="flex-col flex items-center w-full text-center gap-5">
 					<h1 className="text-white text-4xl max-sm:text-3xl font-bold max-md:w-4/5">
 						Hymsol Android Experimental App
