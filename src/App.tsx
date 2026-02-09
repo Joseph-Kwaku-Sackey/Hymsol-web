@@ -1,4 +1,4 @@
-import { Download } from "lucide-react";
+import { Download, TestTubeDiagonal } from "lucide-react";
 import "./App.css";
 import Logo from "./assets/logo-full_splash.png";
 
@@ -18,15 +18,21 @@ function App() {
 					<h1 className="text-white text-4xl max-sm:text-3xl font-bold max-md:w-4/5">
 						Hymsol App
 					</h1>
-					<h2 className="text-amber-200 text-2xl max-sm:text-xl font-bold mt-10 mb-3 max-md:w-4/5">
-						Android Experimental Build
-					</h2>
+					<div className="max-md:w-4/5 flex mt-10 mb-3 gap-1.5 justify-center items-center">
+						<h2 className="text-amber-200 italic text-2xl max-sm:text-xl font-bold ">
+							Android Experimental Build
+						</h2>
+						{/* <TestTubeDiagonal colo  r="#fee685" size={20} />{" "} */}
+						{/* <h2 className="text-amber-200 italic text-2xl max-sm:text-xl font-bold ">
+							build
+						</h2> */}
+					</div>
 					<p className="text-white max-sm:w-[90%] w-120 text-[15px] ">
 						The Android Experimental Version of Hymsol is{" "}
-						<span className="text-green-200 font-bold">now available</span>.
+						<span className="text-lime-300 font-bold">now available</span>.
 						Click on the button below to download and test for free. Send your
 						feedback through the app{" "}
-						<span className="text-green-200 ">
+						<span className="text-lime-300 ">
 							( Settings {"-> "} Help & Feedback )
 						</span>{" "}
 						after testing. Thank you for using Hymsol.
@@ -40,7 +46,7 @@ function App() {
 					<a
 						download
 						href="/Hymsol_experimental-build_v1.0.0.apk"
-						className="download-btn bg-white w-4/5 max-w-100 py-4 flex gap-3 justify-center rounded-full hover:bg-black hover:text-white active:scale-90 transition-all "
+						className="download-btn text-black font-medium border-2 border-amber-400  bg-linear-to-r from-amber-200/30 bg-white w-4/5 max-w-100 py-4 flex gap-3 justify-center rounded-full hover:scale-90 active:scale-90 transition-all "
 					>
 						Download App
 						<Download size={20} />
