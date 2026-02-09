@@ -1,4 +1,4 @@
-import { Download, TestTubeDiagonal } from "lucide-react";
+import { Download, } from "lucide-react";
 import "./App.css";
 import Logo from "./assets/logo-full_splash.png";
 
