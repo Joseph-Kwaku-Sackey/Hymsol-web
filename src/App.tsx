@@ -29,10 +29,10 @@ function App() {
 					</div>
 					<p className="text-white max-sm:w-[90%] w-120 text-[15px] ">
 						The Android Experimental Version of Hymsol is{" "}
-						<span className="text-lime-300 font-bold">now available</span>.
+						<span className="text-lime-100 font-bold">now available</span>.
 						Click on the button below to download and test for free. Send your
 						feedback through the app{" "}
-						<span className="text-lime-300 ">
+						<span className="text-lime-100 ">
 							( Settings {"-> "} Help & Feedback )
 						</span>{" "}
 						after testing. Thank you for using Hymsol.
