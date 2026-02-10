@@ -71,7 +71,7 @@ function App() {
 					) : (
 						<>
 							<img src={AndroidIcon} width={100} className="w-6" />
-							<p className="text-shadow-lg">Download apk</p>
+							<p >Download apk</p>
 							<Download size={20} className="relative top-0.5" />
 						</>
 					)}
