@@ -53,8 +53,8 @@ function App() {
 					<p className="text-white max-sm:w-[90%] w-120 text-[15px] ">
 						The Android testing version of Hymsol is{" "}
 						<span className="text-green-300 font-bold">now available!</span>{" "}
-						Click on the button below to download and test for free. Send your
-						feedback through the app{" "}
+						Click on the button below to download and test for free (Press and
+						wait). Send your feedback through the app{" "}
 						<span className="text-green-300 ">
 							( Settings {"-> "} Help & Feedback )
 						</span>{" "}
@@ -63,11 +63,11 @@ function App() {
 					{/* <p className="text-white max-sm:w-[90%] w-120 text-center"></p> */}
 				</section>
 				<button
-					className="mt-15 download-btn text-[17px] text-black font-medium bg-linear-to-r from-amber-200/30 bg-white w-4/5 max-w-100 py-4 flex gap-3 justify-center items-baseline rounded-full hover:scale-90 active:scale-90 transition-all"
+					className="mt-15 download-btn text-[17px] text-black font-medium bg-linear-to-r from-amber-200/30 bg-white w-4/5 max-w-100 py-3 md:py-4 flex gap-3 justify-center items-baseline rounded-full hover:cursor-pointer hover:scale-90 active:scale-90 transition-all"
 					onClick={handleFileDownload}
 				>
 					{isLoading ? (
-						<LoaderCircle className="animate-spin" />
+						<LoaderCircle className="loader-spin" />
 					) : (
 						<>
 							<img src={AndroidIcon} width={100} className="w-6" />
