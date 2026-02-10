@@ -1,10 +1,32 @@
-import { Download } from "lucide-react";
+import { Download, LoaderCircle } from "lucide-react";
 import "./App.css";
 import Logo from "./assets/logo-full_splash.png";
 import AndroidIcon from "../src/assets/android.svg";
+import { useState } from "react";
 
 function App() {
 	const date = new Date();
+	const [isLoading, setIsLoading] = useState(false);
+	async function handleFileDownload() {
+		try {
+			setIsLoading(true);
+			const res = await fetch("/Hymsol_experimental-build_v1.0.0.apk");
+			const blob = await res.blob();
+
+			const url = URL.createObjectURL(blob);
+			const a = document.createElement("a");
+			a.href = url;
+			a.download = "Hymsol_experimental-build_v1.0.0.apk";
+			a.click();
+
+			URL.revokeObjectURL(url);
+		} catch (error) {
+			setIsLoading(false);
+			console.log(error);
+		} finally {
+			setIsLoading(false);
+		}
+	}
 	return (
 		<div
 			id="main-container"
@@ -40,20 +62,19 @@ function App() {
 					</p>
 					{/* <p className="text-white max-sm:w-[90%] w-120 text-center"></p> */}
 				</section>
-				<button className="flex gap-5 w-full justify-center items-center mt-15  ">
-					{/* <h2 className="text-green-300  text-2xl font-bold">
-						Now Available!
-					</h2> */}
-
-					<a
-						download
-						href="/Hymsol_experimental-build_v1.0.0.apk"
-						className="download-btn text-[17px] text-black font-medium bg-linear-to-r from-amber-200/30 bg-white w-4/5 max-w-100 py-4 flex gap-3 justify-center items-baseline rounded-full hover:scale-90 active:scale-90 transition-all "
-					>
-						<img src={AndroidIcon} width={100} className="w-6" />
-						Download apk
-						<Download size={20} className="relative top-0.5" />
-					</a>
+				<button
+					className="mt-15 download-btn text-[17px] text-black font-medium bg-linear-to-r from-amber-200/30 bg-white w-4/5 max-w-100 py-4 flex gap-3 justify-center items-baseline rounded-full hover:scale-90 active:scale-90 transition-all"
+					onClick={handleFileDownload}
+				>
+					{isLoading ? (
+						<LoaderCircle className="animate-spin" />
+					) : (
+						<>
+							<img src={AndroidIcon} width={100} className="w-6" />
+							<p>Download apk</p>
+							<Download size={20} className="relative top-0.5" />
+						</>
+					)}
 				</button>
 				<p className="text-white/40 mt-10 ">version 1.0.0</p>
 			</main>
