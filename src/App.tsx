@@ -32,7 +32,7 @@ function App() {
 			id="main-container"
 			className=" min-h-dvh isolate flex gap-15 flex-col relative"
 		>
-			<div className="bg-[#000000cc] h-full  absolute -z-300 backdrop-blur-lg  w-full " />
+			<div className="bg-[#000000d5] h-full  absolute -z-300 backdrop-blur-lg  w-full " />
 			<main className=" h-full  flex items-center flex-col z-300 relative mt-20">
 				<section className="flex-col flex items-center w-full text-center ">
 					<header className="h-15 flex items-center top-0 pl-4 z-100 mr-6">
@@ -63,7 +63,7 @@ function App() {
 					{/* <p className="text-white max-sm:w-[90%] w-120 text-center"></p> */}
 				</section>
 				<button
-					className="mt-15 download-btn text-[17px] text-black font-medium bg-linear-to-r from-amber-200/30 bg-white w-4/5 max-w-100 py-3 md:py-4 flex gap-3 justify-center items-baseline rounded-full hover:cursor-pointer hover:scale-90 active:scale-90 transition-all"
+					className="mt-15 download-btn text-[17px] text-black font-medium bg-linear-to-r from-amber-200/30 bg-white w-9/12 max-w-100 py-3 md:py-4 flex gap-3 justify-center items-baseline rounded-full hover:cursor-pointer hover:scale-90 active:scale-90 transition-all"
 					onClick={handleFileDownload}
 				>
 					{isLoading ? (
