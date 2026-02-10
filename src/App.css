@@ -1,17 +1,31 @@
 @import "tailwindcss";
 
-
-html{
-  background-color: #000;
+@font-face {
+	font-family: inter;
+	src: url("../src/assets//font/Inter_18pt-Regular.ttf");
 }
 
-body{
-  background-color: #000;
+@font-face {
+	font-family: inter-bold;
+	src: url("../src/assets//font/INTER-VARIABLEFONT_OPSZ\,WGHT.TTF");
 }
 
-#main-container{
-  background: url("../src//assets//img_ad-1.jpg") center;
-
-  
+html {
+	background-color: #000;
+	font-family: inter;
 }
 
+#main-container {
+	background: url("../src//assets//img_ad-1.jpg") center;
+}
+
+h1 {
+	font-family: inter-bold;
+	font-weight: 700;
+}
+
+h2 {
+	font-family: inter-bold;
+	font-weight: 600;
+	/* font-style: italic; */
+}
