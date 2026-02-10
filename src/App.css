@@ -30,6 +30,12 @@ h2 {
 	/* font-style: italic; */
 }
 
+button{
+		font-family: inter-bold;
+	font-weight: 400;
+	
+}
+
 .loader-spin{
   animation: spin .5s linear infinite ;
 }

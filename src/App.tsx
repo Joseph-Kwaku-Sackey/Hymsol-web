@@ -63,7 +63,7 @@ function App() {
 					{/* <p className="text-white max-sm:w-[90%] w-120 text-center"></p> */}
 				</section>
 				<button
-					className="mt-15 download-btn text-[17px] text-black font-medium bg-linear-to-r from-amber-200/30 bg-white w-9/12 max-w-100 py-3 md:py-4 flex gap-3 justify-center items-baseline rounded-full hover:cursor-pointer hover:scale-90 active:scale-90 transition-all"
+					className="mt-15 download-btn text-[17px] text-white bg-linear-to-r from-green-700 bg-green-600 w-9/12 max-w-100 py-3 md:py-4 flex gap-3 justify-center items-baseline rounded-full hover:cursor-pointer hover:scale-90 active:scale-90 transition-all"
 					onClick={handleFileDownload}
 				>
 					{isLoading ? (
@@ -71,7 +71,7 @@ function App() {
 					) : (
 						<>
 							<img src={AndroidIcon} width={100} className="w-6" />
-							<p>Download apk</p>
+							<p className="text-shadow-lg">Download apk</p>
 							<Download size={20} className="relative top-0.5" />
 						</>
 					)}
