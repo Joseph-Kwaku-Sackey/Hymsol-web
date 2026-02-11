@@ -10,7 +10,7 @@ function App() {
 	async function handleFileDownload() {
 		try {
 			setIsLoading(true);
-			const res = await fetch("src/assets//Hymsol_experimental-build_v1.0.0.apk");
+			const res = await fetch("/Hymsol_experimental-build_v1.0.0.apk");
 			const blob = await res.blob();
 
 			const url = URL.createObjectURL(blob);
