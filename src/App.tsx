@@ -10,9 +10,7 @@ function App() {
 	async function handleFileDownload() {
 		try {
 			setIsLoading(true);
-			const res = await fetch(
-				"https://github.com/Joseph-Kwaku-Sackey/Hymsol-web/raw/refs/heads/main/public/Hymsol_experimental-build_v1.0.0.apk?download=",
-			);
+			const res = await fetch("public/Hymsol_experimental-build_v1.0.0.apk");
 			const blob = await res.blob();
 
 			const url = URL.createObjectURL(blob);
@@ -73,7 +71,7 @@ function App() {
 					) : (
 						<>
 							<img src={AndroidIcon} width={100} className="w-6" />
-							<p>Download apk</p>
+							<p >Download apk</p>
 							<Download size={20} className="relative top-0.5" />
 						</>
 					)}
