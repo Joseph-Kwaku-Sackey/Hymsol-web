@@ -10,26 +10,16 @@ function App() {
 	async function handleFileDownload() {
 		try {
 			setIsLoading(true);
-			const apkUrl =
-				"https://github.com/Joseph-Kwaku-Sackey/Hymsol-web/releases/download/v1.0.0/Hymsol_experimental-build_v1.0.0.apk";
+			const res = await fetch("src/assets//Hymsol_experimental-build_v1.0.0.apk");
+			const blob = await res.blob();
 
-			// const blob = await res.blob();
+			const url = URL.createObjectURL(blob);
+			const a = document.createElement("a");
+			a.href = url;
+			a.download = "Hymsol_experimental-build_v1.0.0.apk";
+			a.click();
 
-			// Create invisible link and trigger click
-			const link = document.createElement("a");
-			link.href = apkUrl;
-			link.download = "Hymsol_experimental-build_v1.0.0.apk";
-			document.body.appendChild(link);
-			link.click();
-			document.body.removeChild(link);
-
-			// const url = URL.createObjectURL(blob);
-			// const a = document.createElement("a");
-			// a.href = url;
-			// a.download = "Hymsol_experimental-build_v1.0.0.apk";
-			// a.click();
-
-			// URL.revokeObjectURL(url);
+			URL.revokeObjectURL(url);
 		} catch (error) {
 			setIsLoading(false);
 			console.log(error);
@@ -81,7 +71,7 @@ function App() {
 					) : (
 						<>
 							<img src={AndroidIcon} width={100} className="w-6" />
-							<p>Download apk</p>
+							<p >Download apk</p>
 							<Download size={20} className="relative top-0.5" />
 						</>
 					)}
