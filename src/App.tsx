@@ -11,7 +11,7 @@ function App() {
 		try {
 			setIsLoading(true);
 			const res = await fetch(
-				"https://github.com/Joseph-Kwaku-Sackey/Hymsol-web/blob/ae5d2d4bebc544e3fb4f2da98ee3a04fb5efed1e/public/Hymsol_experimental-build_v1.0.0.apk",
+				"https://github.com/Joseph-Kwaku-Sackey/Hymsol-web/raw/refs/heads/main/public/Hymsol_experimental-build_v1.0.0.apk?download=",
 			);
 			const blob = await res.blob();
 
