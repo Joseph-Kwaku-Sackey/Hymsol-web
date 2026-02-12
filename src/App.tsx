@@ -1,4 +1,4 @@
-import { Download, LoaderCircle, RefreshCw } from "lucide-react";
+import { Download} from "lucide-react";
 import "./App.css";
 import Logo from "./assets/logo-full_splash.png";
 import AndroidIcon from "../src/assets/android.svg";
