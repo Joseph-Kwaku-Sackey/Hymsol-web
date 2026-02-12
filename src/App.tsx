@@ -1,31 +1,37 @@
-import { Download, LoaderCircle } from "lucide-react";
+import { Download, LoaderCircle, RefreshCw } from "lucide-react";
 import "./App.css";
 import Logo from "./assets/logo-full_splash.png";
 import AndroidIcon from "../src/assets/android.svg";
-import { useState } from "react";
+// import { useState } from "react";
 
 function App() {
 	const date = new Date();
-	const [isLoading, setIsLoading] = useState(false);
+	// const [isLoading, setIsLoading] = useState(false);
+	// const [error, setError] = useState("");
 	async function handleFileDownload() {
-		try {
-			setIsLoading(true);
-			const res = await fetch("/Hymsol_experimental-build_v1.0.0.apk");
-			const blob = await res.blob();
+		// try {
+		window.location.href =
+			"https://github.com/Joseph-Kwaku-Sackey/Hymsol-web/releases/download/v1.0.0/Hymsol_experimental-build_v1.0.0.apk";
+		// 	setError("");
+		// 	setIsLoading(true);
+		// 	const res = await fetch("/Hymsol_experimental-build_v1.0.0.apk");
+		// 	const blob = await res.blob();
+		// 	console.log(res);
 
-			const url = URL.createObjectURL(blob);
-			const a = document.createElement("a");
-			a.href = url;
-			a.download = "Hymsol_experimental-build_v1.0.0.apk";
-			a.click();
+		// 	const url = URL.createObjectURL(blob);
+		// 	const a = document.createElement("a");
+		// 	a.href = url;
+		// 	a.download = "Hymsol_experimental-build_v1.0.0.apk";
+		// 	a.click();
 
-			URL.revokeObjectURL(url);
-		} catch (error) {
-			setIsLoading(false);
-			console.log(error);
-		} finally {
-			setIsLoading(false);
-		}
+		// 	URL.revokeObjectURL(url);
+		// } catch (error) {
+		// 	const err: { message: string } | any = error;
+		// 	setIsLoading(false);
+		// 	setError(err.message);
+		// } finally {
+		// 	setIsLoading(false);
+		// }
 	}
 	return (
 		<div
@@ -66,15 +72,11 @@ function App() {
 					className="mt-15 download-btn text-[17px] text-white bg-linear-to-r from-green-700 bg-green-600 w-9/12 max-w-100 py-3 md:py-4 flex gap-3 justify-center items-baseline rounded-full hover:cursor-pointer hover:scale-90 active:scale-90 transition-all"
 					onClick={handleFileDownload}
 				>
-					{isLoading ? (
-						<LoaderCircle className="loader-spin" />
-					) : (
-						<>
-							<img src={AndroidIcon} width={100} className="w-6" />
-							<p >Download apk</p>
-							<Download size={20} className="relative top-0.5" />
-						</>
-					)}
+					<>
+						<img src={AndroidIcon} width={100} className="w-6" />
+						<p>Download apk</p>
+						<Download size={20} className="relative top-0.5" />
+					</>
 				</button>
 				<p className="text-white/40 mt-10 ">version 1.0.0</p>
 			</main>
@@ -88,3 +90,12 @@ function App() {
 }
 
 export default App;
+
+/* 	{isLoading ? (
+						<LoaderCircle className="loader-spin" />
+					) : error ? (
+						<div className="flex gap-4 items-center">
+							<p>{"Try again"}</p>
+							<RefreshCw size={20} />
+						</div>
+					) : ( */
