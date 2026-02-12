@@ -59,7 +59,7 @@ function App() {
 					<p className="text-white max-sm:w-[90%] w-120 text-[15px] ">
 						The Android testing version of Hymsol is{" "}
 						<span className="text-green-300 font-bold">now available!</span>{" "}
-						Click on the button below to download and test for free Send your feedback through the app{" "}
+						Click on the button below to download and test for free. Send your feedback through the app{" "}
 						<span className="text-green-300 ">
 							( Settings {"-> "} Help & Feedback )
 						</span>{" "}
