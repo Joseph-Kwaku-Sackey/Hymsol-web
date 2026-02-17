@@ -81,7 +81,7 @@ function App() {
 			</main>
 			<footer className="bg-[#111a] text-[#ddd]  flex w-full h-11 justify-center items-center absolute bottom-0">
 				<p className="w-fit text-[13px] italic">
-					&copy;Copyright: Hymsol @{date.getFullYear()}
+					&copy;Copyright - Hymsol @{date.getFullYear()}
 				</p>
 			</footer>
 		</div>
