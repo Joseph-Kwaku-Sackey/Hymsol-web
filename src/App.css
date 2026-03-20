@@ -11,12 +11,8 @@
 }
 
 html {
-	background-color: #000;
+	/* background-color: #000; */
 	font-family: inter;
-}
-
-#main-container {
-	background: url("../src//assets//img_ad-1.jpg") center;
 }
 
 h1 {
