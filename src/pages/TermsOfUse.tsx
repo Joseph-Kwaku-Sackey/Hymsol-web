@@ -198,12 +198,12 @@ const css = `
 .legal-page__summary { font-size: 14px; }
 `;
 
-const Block = ({ block }) => (
+const Block = ({ block }: { block: any }) => (
 	<>
 		{block.p && <p>{block.p}</p>}
 		{block.list && (
 			<ul>
-				{block.list.map((item) => (
+				{block.list.map((item: any) => (
 					<li key={item}>{item}</li>
 				))}
 			</ul>

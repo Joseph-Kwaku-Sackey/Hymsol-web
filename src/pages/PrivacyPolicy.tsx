@@ -236,7 +236,7 @@ const ListItem = ({ item  }:{item:any}) =>
 		<li>{item}</li>
 	);
 
-const Block = ({ block }) => (
+const Block = ({ block }:{block:any}) => (
 	<>
 		{block.labeled && (
 			<p>
@@ -247,7 +247,7 @@ const Block = ({ block }) => (
 		{block.p && <p>{block.p}</p>}
 		{block.list && (
 			<ul>
-				{block.list.map((item, i) => (
+				{block.list.map((item:any, i:any) => (
 					<ListItem key={i} item={item} />
 				))}
 			</ul>
