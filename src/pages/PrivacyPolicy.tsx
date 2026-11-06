@@ -1,4 +1,4 @@
-import React from "react";
+
 
 const LAST_UPDATED = "6th November, 2026.";
 
